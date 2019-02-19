@@ -1,0 +1,6 @@
+get-mailboxdatabase
+
+Get-MailboxStatistics | where-object {$ _. DisconnectDate -ne $ null} | Selecione DisplayName, MailboxGuid
+
+Remove-Mailbox -Database 'Mailbox Database' -StoreMailboxIdentity 232c3dfa-d294-415b-ad50-072d63f0b854 -confirm:$false
+

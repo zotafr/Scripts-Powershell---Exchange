@@ -1,0 +1,10 @@
+
+
+[PS] C:\Documents and Settings\Administrador\Desktop>set-mailbox mario.dacanal -RulesQuota 256kb
+
+[PS] C:\Documents and Settings\Administrador\Desktop>get-mailbox mario.dacanal | select name,rulesquota
+
+Name                                    RulesQuota
+----                                    ----------
+Mario Dacanal                           256KB
+

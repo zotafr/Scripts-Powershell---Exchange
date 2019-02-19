@@ -1,0 +1,2 @@
+get-Mailbox -Identity “marcia.ribeiro”
+Export-Mailbox -Identity “thais.silveira” -IncludeFolders “\Caixa de Entrada”,“\Mensagens Enviadas”, “\Mensagens Excluidas” -StartDate “1/1/2000” -EndDate “31/12/2017” –DeleteContent

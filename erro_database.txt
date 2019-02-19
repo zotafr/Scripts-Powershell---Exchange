@@ -1,0 +1,17 @@
+--------------------------------------------------------
+Microsoft Exchange Error
+--------------------------------------------------------
+Failed to mount database 'Corporativo'.
+
+Corporativo
+Failed
+Error:
+Exchange is unable to mount the database that you specified. Specified database: HUB\Grupo Sao Lucas\Corporativo; Error code: MapiExceptionCallFailed: Unable to mount database. (hr=0x80004005, ec=-550)
+.
+
+
+
+
+--------------------------------------------------------
+OK
+--------------------------------------------------------

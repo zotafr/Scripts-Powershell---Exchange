@@ -1,0 +1,3 @@
+Exportando e-mail para .pst apartir da estação de trabalho - Poweshell
+
+Export-Mailbox -Identity fisioterapia -PSTFolderPath D:\Export

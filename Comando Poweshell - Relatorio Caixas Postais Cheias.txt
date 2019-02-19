@@ -1,0 +1,1 @@
+Get-MailboxStatistics |select DisplayName,StorageLimitStatus | Where {$_.StorageLimitStatus -eq "IssueWarning"} > c:\log_mailbox.txt

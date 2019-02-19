@@ -1,0 +1,14 @@
+Parar o serviço:
+Microsoft Exchange Active Directory Topology Service
+
+
+excluir a pasta data no caminho:
+
+C:\Program Files\Microsoft\Exchange Server\TransportRoles\data
+
+
+Reiniciar os serviços Microsoft Exchange *
+
+ou 
+
+Reiniciar o Servidor.

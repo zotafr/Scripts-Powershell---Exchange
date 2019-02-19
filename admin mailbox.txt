@@ -1,0 +1,21 @@
+Summary: 2 item(s). 2 succeeded, 0 failed. 
+Elapsed time: 00:00:00
+
+
+GRUPOSAOLUCAS\administrador
+Completed
+
+Exchange Management Shell command completed:
+Remove-MailboxPermission -Identity 'CN=Luiz Andrade,OU=Tecnologia da Informação,OU=TI,DC=gruposaolucas,DC=com,DC=br' -User 'GRUPOSAOLUCAS\administrador' -Deny -InheritanceType 'All' -AccessRights 'FullAccess'
+
+Elapsed Time: 00:00:00
+
+
+GRUPOSAOLUCAS\administrador
+Completed
+
+Exchange Management Shell command completed:
+Add-MailboxPermission -Identity 'CN=Luiz Andrade,OU=Tecnologia da Informação,OU=TI,DC=gruposaolucas,DC=com,DC=br' -User 'GRUPOSAOLUCAS\administrador' -AccessRights 'FullAccess'
+
+Elapsed Time: 00:00:00
+

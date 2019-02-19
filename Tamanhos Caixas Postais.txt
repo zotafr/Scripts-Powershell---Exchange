@@ -1,0 +1,1 @@
+[PS] C:\>Get-mailbox -Database "Grupo Sao Lucas\coordenacao" | Get-MailboxStatistics | ft @{label="User";expression={$_.DisplayName}},@{label="Total Size (MB)";expression={$_.TotalItemSize.Value.ToMB()}},@{label="Items";expression={$_.ItemCount}} -auto | export-csv c:\Coordenacao.csv

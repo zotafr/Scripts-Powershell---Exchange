@@ -1,0 +1,47 @@
+Espaço usado
+
+Get-MailboxStatistics | select DisplayName,TotalDeletedItemSize,TotalItemSize,StorageLimitStatus | out-html | out-ie
+
+Usuarios
+Get-Mailbox | select name, alias, database | out-html | out-ie
+
+
+Ultimo Logon e Logof
+
+Get-MailboxStatistics | select Displayname,LastLogontime,LastLogoffTime | out-html | out-ie
+
+Total de e-mail
+
+Get-MailboxStatistics | Select-Object DisplayName, ItemCount, TotalItemSize | out-html | out-ie
+
+
+Get-MailboxStatistics |Select-object DisplayName,Alias,MailboxSizeMB,ItemCount,PrimarysmtpAddress,IssueWarningQuotaMB,ProhibitSendQuotaMB,ProhibitSendReceiveQuotaMB,DatabaseName,CreationDate,LastLogonTime,LastLogoffTime,isActive
+
+Get-MailboxStatistics | select DisplayName,LastLogonTime,TotalItemSize,StorageLimitStatus,OrganizationalUnit, { $_.TotalItemSize.Value.ToMB() } | Export-Csv C:\Relatorio.csv
+
+Get-Mailbox | select name,alias,OrganizationalUnit,database | Export-Csv C:\Relatorio.csv
+
+Acesso full Caixas Postais
+
+get-mailbox -server HUB | Add-MailboxPermission -User luiz.andrade -AcessRights fullacess
+
+Retirar full Caixas Postais
+
+get-mailbox -server HUB | Remove-MailboxPermission -User luiz.andrade -AcessRights fullacess
+
+Lista dos Grupos de E-mail .csv
+
+get-DistributionGroup | Export-Csv C:\grupo.csv
+
+
+Tamahos caixas postais 
+
+Get-MailboxStatistics | Sort-Object TotalItemSize -Descending | ft DisplayName,@{label="TotalItemSize(KB)";expression={$_.TotalItemSize.Value.ToKB()}}> C:\mailboxes.txt
+
+Caixas Postais Cheias
+
+Get-MailboxStatistics |select DisplayName,StorageLimitStatus | Where {$_.StorageLimitStatus -eq "IssueWarning"} > c:\caixascheias.txt
+
+Verificar mensagens enviadas HUB
+
+get-messagetrackinglog -EventID "SEND" -Start "26/10/2015 00:01:00" -End "27/10/2015 08:12:00" | export-csv c:\send.csv

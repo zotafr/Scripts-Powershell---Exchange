@@ -1,0 +1,38 @@
+ Passo 
+
+1 - Criar e-mail Conctat exchange
+
+Inclui na UO do Zimbra 
+
+No Alias colocar "nome.zimbra"
+
+no endereço @zimbra.gruposaolucas.com.br
+
+2 - Configurar encaminhamento no e-mail exchange
+
+3 - tirar encaminhamento zimbra ( gerenciamento - Contas - localizar usuario - Editar - Avançado - transporte de e-mail:lmtp:mailz.gruposaolucas.com.br:7025 - Salvar
+
+
+4 - Sincronismo contato e agendas via 192.168.0.251 - zimbra migration.
+
+5- Sincronismo email (Servidor zimbra -> ./sincrozina conta.usuario
+
+6 -no Poweshell do Exchange - get-mailbox fernando.souza |get-mailboxstatistics | select Mailboxguid, Database
+
+7- desabilitar mailbox (exchange)
+ 
+8- remover mailbox  (exchange)
+
+Remove-Mailbox -Database "HUB\Grupo Sao Lucas\Coordenacao" -StoreMailboxIdentity e4187826-11fe-433d-af0b-188a712dba22 -confirm:$false
+
+
+8- remover mail contact "nome.zimbra" (exchange)
+
+9- criar mailenable (exchange)
+
+New Mail user - com o email usuario@zimbra.gruposaolucas.com.br
+
+
+10- Reconfigurar Outlook (IMAP)
+
+

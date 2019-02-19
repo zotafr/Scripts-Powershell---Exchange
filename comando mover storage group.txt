@@ -1,0 +1,17 @@
+Summary: 1 item(s). 0 succeeded, 1 failed. 
+Elapsed time: 00:12:10
+
+
+Grupo Sao Lucas
+Failed
+
+Error:
+WMI exception occured on server 'hub.gruposaolucas.com.br': Call cancelled 
+
+Call cancelled 
+
+Exchange Management Shell command attempted:
+move-StorageGroupPath -Identity 'HUB\Grupo Sao Lucas' -LogFolderPath 'F:\Program Files\Microsoft\Exchange Server\Mailbox\Grupo Sao Lucas\sg_log_files' -SystemFolderPath 'F:\Program Files\Microsoft\Exchange Server\Mailbox\Grupo Sao Lucas\sg_file_system'
+
+Elapsed Time: 00:12:10
+

@@ -1,0 +1,1 @@
+$r=@();get-mailbox | foreach {$l = ""|Select Account,Size; $l.account= $_.samaccountname; $l.Size = (get-mailboxstatistics -id $_.distinguishedname).totalitemsize; $r += $l}; $r | export-csv c:\name.csv -notype -encoding ascii

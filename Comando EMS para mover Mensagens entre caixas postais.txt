@@ -1,0 +1,2 @@
+[PS] C:\Documents and Settings\Administrador\Desktop>
+Export-Mailbox -Identity 'teste' -TargetMailbox 'luiz.andrade' -TargetFolder 'teste'

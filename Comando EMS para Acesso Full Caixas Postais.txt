@@ -1,0 +1,6 @@
+Exchange Management Shell command completed:
+
+Add-MailboxPermission -Identity 'CN=teste,OU=INTERNET,DC=gruposaolucas,DC=com,DC=br' -User 'GRUPOSAOLUCAS\luiz.andrade' -AccessRights 'FullAccess'
+
+Elapsed Time: 00:00:00
+

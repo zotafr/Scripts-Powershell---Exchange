@@ -1,0 +1,6 @@
+clean-MailboxDatabase -Identity 'Grupo Sao Lucas\Corporativo'
+clean-MailboxDatabase -Identity 'Grupo Sao Lucas\Coordenacao'
+clean-MailboxDatabase -Identity 'Grupo Sao Lucas\HSL-HR-RD'
+
+clean-MailboxDatabase -Identity 'First Storage Group\Mailbox Database'
+

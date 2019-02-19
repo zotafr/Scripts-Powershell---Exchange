@@ -1,0 +1,45 @@
+
+eseutil /p "F:\Program Files\Microsoft\Exchange Server\Mailbox\Grupo Sao Lucas\Coordenacao\Coordenacao.edb"
+
+Operation terminated with error -1032 (JET_errFileAccessDenied, Cannot access file, the file is locked or in use)
+
+eseutil /p "F:\Program Files\Microsoft\Exchange Server\Mailbox\Grupo Sao Lucas\Coordenacao\Coordenacao.edb"
+
+
+
+eseutil /p "G:\Mailbox\Second Storage Group\Public Folder Database.edb"
+
+eseutil /p "G:\Mailbox\Grupo Sao Lucas\HSL-HR-RD\HSL-HR-RD.edb"
+
+eseutil /p "G:\Mailbox\Grupo Sao Lucas\Corporativo\Corporativo.edb"
+
+eseutil /p "G:\Mailbox\Grupo Sao Lucas\Coordenacao\Coordenacao.edb"
+
+eseutil /ml "G:\Mailbox\Grupo Sao Lucas\sg_log_file"
+
+eseutil /r "G:\Mailbox\Grupo Sao Lucas\sg_log_file"
+
+eseutil /mh "G:\Mailbox\Grupo Sao Lucas\Corporativo\Corporativo.edb"
+
+HUB\Grupo Sao Lucas\Corporativo
+
+
+https://community.spiceworks.com/how_to/149029-resolve-error-unable-to-mount-database-hr-0x80004005-ec-550
+
+
+1. Executar o comando abaixo no EMS:
+eseutil /p "G:\Mailbox\Grupo Sao Lucas\Corporativo\Corporativo.edb"
+
+2. Em seguida realizar o seguinte comando:
+eseutil /d "G:\Mailbox\Grupo Sao Lucas\Corporativo\Corporativo.edb" /t "G:\Mailbox\Grupo Sao Lucas\Corporativo\Corporativo.edb"
+
+3. E por ultimo Isinteg:
+Isinteg –s <hub> –fix -tests alltests -t "G:\Mailbox\Grupo Sao Lucas\Corporativo\Corporativo.edb"
+
+Foi possível efetuar reparação da  database utilizando procedimento de recovery:
+ 
+1.        Executando Eseutil /P para realizar reparo da database  em page-level e table-level.
+2.        Executando Eseutil /D para realizar rebuild dos  indexes e desfragmentar a database
+3.        Executando Isinteg para reparo em nível de aplicação
+
+https://social.technet.microsoft.com/wiki/pt-br/contents/articles/15049.exchange-2007-falha-ao-montar-database.aspx?ranMID=24542&ranEAID=TnL5HPStwNw&ranSiteID=TnL5HPStwNw-nm1XmvXSc_tafWw9DfMIdw&epi=TnL5HPStwNw-nm1XmvXSc_tafWw9DfMIdw&irgwc=1&OCID=AID681541_aff_7593_1243925&tduid=(ir__6zobfikpmvat2wlws0xaw0lg0e2xhca3sawnri6d00)(7593)(1243925)(TnL5HPStwNw-nm1XmvXSc_tafWw9DfMIdw)()&irclickid=_6zobfikpmvat2wlws0xaw0lg0e2xhca3sawnri6d00
